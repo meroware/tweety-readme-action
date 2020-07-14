@@ -14,8 +14,8 @@ async function start() {
     }
 
     const tweet = await tweeterModule.getLatestTweet();
-
-    const markdown = await tweeterModule.convertTweetToMarkdown(tweet);
+    console.log(tweet);
+    const markdown = tweeterModule.convertTweetToMarkdown(tweet);
     console.log(markdown);
     core.setOutput("tweet-markdown", markdown);
   } catch (error) {
