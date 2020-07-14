@@ -2,7 +2,7 @@
   "name": "tweety-readme-action",
   "version": "1.0.0",
   "description": "Creates readme file update push from latest tweeter",
-  "main": "index.js",
+  "main": "dist/index.js",
   "scripts": {
     "build": "ncc build index.js",
     "build-commit": "npm run build; git add dist/*;",
