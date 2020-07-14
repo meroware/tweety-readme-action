@@ -1,0 +1,20 @@
+name: 'tweety-readme-action'
+description: 'Gets latest tweet and pushes it to readme'
+author: Edward Romero
+branding: 'message-square'
+color: 'blue'
+inputs:
+  tweeter-token: 
+    description: 'Tweeter api token'
+    required: false
+    default: ''
+  github-token: 
+    description: 'The github token'
+    required: true
+    default: ''
+outputs:
+  tweet-markdown:
+    description: 'Provides latest tweet in markdown format'
+runs:
+  using: 'node12'
+  main: 'dist/index.js'
