@@ -13,9 +13,9 @@ async function start() {
       throw new Error("Github token required");
     }
 
-    const tweet = tweeterModule.getLatestTweet();
+    const tweet = await tweeterModule.getLatestTweet();
 
-    const markdown = tweeterModule.convertTweetToMarkdown(tweet);
+    const markdown = await tweeterModule.convertTweetToMarkdown(tweet);
     console.log(markdown);
     core.setOutput("tweet-markdown", markdown);
   } catch (error) {
